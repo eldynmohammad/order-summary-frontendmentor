@@ -19,7 +19,22 @@
 	--font-bold: 700;
 	--font-bolder: 900;
 
-	--font-size: 1rem;
+	--font-big: 1.15rem;
+	--font-normal: .798rem;
+}
+
+@media screen and (max-width: 576px) {
+	:root {
+		--font-big: 1.25rem;
+		--font-normal: .837rem;
+	}
+}
+
+@media screen and (min-height: 1080px) {
+	:root {
+		--font-big: 1.75rem;
+		--font-normal: 1rem;
+	}
 }
 
 /* ==================== Base ==================== */
@@ -36,14 +51,14 @@ body {
 	padding: 0;
 	font-family: var(--redhat);
 	background-color: var(--main-color-alt);
-	font-size: var(--font-size);
+	font-size: var(--font-normal);
 }
 
 /* ==================== Layout ==================== */
 main {
 	position: relative;
 	height: 100vh;
-	padding: 0 1rem;
+	padding: 1rem;
 }
 
 h1, h2, h3, p, a {
@@ -104,12 +119,13 @@ img {
 
 .card__content {
 	text-align: center;
-	padding: 2rem 1rem;
+	padding: 2rem 1.5rem;
 }
 
 .card__title {
-	font-size: 1.75rem;
+	font-size: var(--font-big);
 	color: var(--title-color);
+	font-weight: var(--font-bold);
 	margin-bottom: 1rem;
 }
 
@@ -123,8 +139,9 @@ img {
 	grid-template-columns: max-content 1fr max-content;
 	background-color: #f8f8f8;
 	border-radius: 1rem;
-	padding: 1rem 1.25rem;
+	padding: 1rem;
 	margin-bottom: 1.5rem;
+	align-items: center;
 }
 
 .card__plan-text {
@@ -138,6 +155,7 @@ img {
 	background-color: transparent;
 	text-decoration: underline;
 	transition: .3s;
+	padding: 0;
 }
 
 .card__plan-button:hover {
@@ -146,7 +164,7 @@ img {
 
 .card__plan-name {
 	color: var(--title-color);
-	font-weight: 700;
+	font-weight: var(--font-bold);
 }
 
 .card__plan-price {
@@ -180,19 +198,23 @@ img {
 
 @media screen and (min-width: 576px) {
 	.card {
-		width: 450px;
+		width: 380px;
 	}
-
+	
 	.card__content {
-		padding: 2rem 2.75rem;
+		padding: 1.5rem 2.75rem;
 	}
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1440px) {
 	.bgImg {
 		display: block;
 	}
 
+	.card {
+		width: 450px;
+	}
+	
 	.bgImg-mobile {
 		display: none;
 	}
