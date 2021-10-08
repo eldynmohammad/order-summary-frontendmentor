@@ -1,0 +1,199 @@
+/* ==================== Google Fonts ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* ==================== Custom variables ==================== */
+:root {
+	/* ---------- Color ---------- */
+	--main-color: hsl(245, 75%, 52%);
+	--main-color-alt: hsl(225, 100%, 94%);
+	--main-color-2: hsl(224, 23%, 55%);
+	--main-color-alt-2: hsl(225, 100%, 98%);
+	--main-color-dark: hsl(223, 47%, 23%);
+
+	--title-color: hsl(245, 12%, 25%);
+	--text-color: hsl(245, 12%, 45%);
+
+	/* ---------- Font ---------- */
+	--redhat: 'Red Hat Display', sans-serif;
+	--font-medium: 500;
+	--font-bold: 700;
+	--font-bolder: 900;
+
+	--font-size: 1rem;
+}
+
+/* ==================== Base ==================== */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--redhat);
+	background-color: var(--main-color-alt);
+	font-size: var(--font-size);
+}
+
+/* ==================== Layout ==================== */
+main {
+	position: relative;
+	height: 100vh;
+	padding: 0 1rem;
+}
+
+h1, h2, h3, p, a {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.button {
+	background-color: var(--main-color);
+	text-align: center;
+	color: white;
+	padding: .85rem;
+	width: 100%;
+	border-radius: .5rem;
+}
+
+.bgImg-mobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.bgImg {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.container {
+	height: 100%;
+	padding: 0 1rem;
+}
+
+/* ==================== Card ==================== */
+.card {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	height: max-content;
+	width: calc(100% - 2rem);
+	background-color: white;
+	border-radius: 1.25rem;
+	overflow: hidden;
+}
+
+.card__content {
+	text-align: center;
+	padding: 2rem 1rem;
+}
+
+.card__title {
+	font-size: 1.75rem;
+	color: var(--title-color);
+	margin-bottom: 1rem;
+}
+
+.card__subtitle {
+	color: var(--text-color);
+	margin-bottom: 1.5rem;
+}
+
+.card__plan {
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
+	background-color: #f8f8f8;
+	border-radius: 1rem;
+	padding: 1rem 1.25rem;
+	margin-bottom: 1.5rem;
+}
+
+.card__plan-text {
+	text-align-last: left;
+	margin-left: 1rem;
+	max-width: 220px;
+}
+
+.card__plan-button {
+	color: var(--main-color-2);
+	background-color: transparent;
+	text-decoration: underline;
+	transition: .3s;
+}
+
+.card__plan-button:hover {
+	color: var(--main-color);
+}
+
+.card__plan-name {
+	color: var(--title-color);
+	font-weight: 700;
+}
+
+.card__plan-price {
+	color: var(--text-color);
+}
+
+.card__button-1,
+.card__button-2 {
+	display: block;
+	transition: .3s;
+}
+
+.card__button-1 {
+	margin-bottom: 1rem;
+	box-shadow: 0 4px 32px hsl(245, 75%, 52%, .5);
+	font-weight: var(--font-bold);
+}
+
+.card__button-2 {
+	background-color: transparent;
+	color: var(--text-color);
+}
+
+.card__button-1:hover {
+	background-color: var(--main-color-dark);
+}
+
+.card__button-2:hover {
+	color: var(--main-color);
+}
+
+@media screen and (min-width: 576px) {
+	.card {
+		width: 450px;
+	}
+
+	.card__content {
+		padding: 2rem 2.75rem;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.bgImg {
+		display: block;
+	}
+
+	.bgImg-mobile {
+		display: none;
+	}
+}
