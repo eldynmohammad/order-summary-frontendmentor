@@ -14,7 +14,7 @@ Users should be able to:
 ![](/assets/img/screenshot.png)  
   
 ### Links  
-- Live Site URL: [Open here](https://your-live-site-url.com)  
+- Live Site URL: [Open here](https://eldynmohammad.github.io/order-summary-frontendmentor/)  
   
 ## Built with
   
