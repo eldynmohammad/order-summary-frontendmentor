@@ -120,6 +120,7 @@ img {
 .card__content {
 	text-align: center;
 	padding: 2rem 1.5rem;
+	margin: 0;
 }
 
 .card__title {
@@ -204,18 +205,18 @@ img {
 	.card__content {
 		padding: 1.5rem 2.75rem;
 	}
-}
 
-@media screen and (min-width: 1440px) {
 	.bgImg {
 		display: block;
 	}
 
-	.card {
-		width: 450px;
-	}
-	
 	.bgImg-mobile {
 		display: none;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.card {
+		width: 450px;
 	}
 }
