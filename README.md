@@ -11,10 +11,10 @@ Users should be able to:
 - See hover states for interactive elements  
 ### Screenshot  
   
-![](./screenshot.jpg)  
+![](/assets/img/screenshot.png)  
   
 ### Links  
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)  
+- Live Site URL: [Open here](https://your-live-site-url.com)  
   
 ## Built with
   
